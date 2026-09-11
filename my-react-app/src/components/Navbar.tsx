@@ -15,8 +15,8 @@ const Navbar = () => {
                     <li className=' text-gray-700'><a href="">Contact</a></li>
                 </ul>
                 <div className='flex gap-5'>
-                    <button className=' text-gray-600'>Sign In</button>
-                    <button className='bg-pink-600 text-gray-50 pt-1.5 pb-1.5 pr-3.5 pl-3.5 rounded-3xl'>Sign Up</button>
+                    <button className=' text-gray-600 cursor-pointer'>Sign In</button>
+                    <button className='bg-pink-600 text-gray-50 pt-1.5 pb-1.5 pr-3.5 pl-3.5 rounded-3xl cursor-pointer'>Sign Up</button>
                 </div>
             </div>
         </nav>

@@ -5,5 +5,10 @@
   },
   "devDependencies": {
     "daisyui": "^5.7.36"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   }
 }
