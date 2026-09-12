@@ -4,7 +4,7 @@
     "name": "React",
     "category": "Frontend",
     "description": "A declarative, component-based JavaScript library for building modern user interfaces.",
-    "icon": "react",
+    "icon": "./icons/react.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Popular"
@@ -13,98 +13,98 @@
     "id": 2,
     "name": "Vue.js",
     "category": "Frontend",
-    "description": "A progressive JavaScript framework for building interactive and dynamic user interfaces.",
-    "icon": "vue",
+    "description": "An approachable, performant, and versatile framework for building web user interfaces.",
+    "icon": "./icons/vue.svg",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
+    "badge": "Versatile"
   },
   {
     "id": 3,
     "name": "Angular",
     "category": "Frontend",
     "description": "A powerful framework for building scalable and feature-rich web applications.",
-    "icon": "angular",
+    "icon": "./icons/angular.svg",
     "rating": 4.7,
     "difficulty": "Intermediate",
     "badge": "Popular"
   },
   {
     "id": 4,
-    "name": "Next.js",
+    "name": "Svelte",
     "category": "Frontend",
-    "description": "A React framework for building fast, scalable, and production-ready web applications.",
-    "icon": "nextjs",
+    "description": "Cybernetically enhanced web apps with compile-time reactivity and zero virtual DOM overhead.",
+    "icon": "./icons/svelte-logo-png-svg.webp",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Trending"
+    "badge": "Fast"
   },
   {
     "id": 5,
     "name": "Node.js",
     "category": "Backend",
-    "description": "A JavaScript runtime that allows developers to build fast and scalable server-side applications.",
-    "icon": "nodejs",
+    "description": "An asynchronous event-driven JavaScript runtime built on Chrome's V8 engine.",
+    "icon": "./icons/images.png",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Popular"
+    "badge": "Standard"
   },
   {
     "id": 6,
-    "name": "Express.js",
+    "name": "PostgreSQL",
     "category": "Backend",
-    "description": "A lightweight and flexible Node.js framework for building web servers and APIs.",
-    "icon": "express",
+    "description": "A powerful, open-source object-relational database system with proven reliability.",
+    "icon": "./icons/postgresql.svg",
     "rating": 4.7,
     "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
+    "badge": "Top SQL"
   },
   {
     "id": 7,
-    "name": "Django",
+    "name": "TypeScript",
     "category": "Backend",
-    "description": "A high-level Python web framework designed for rapid and secure web development.",
-    "icon": "django",
+    "description": "A strongly typed programming language that builds on JavaScript for robust tooling.",
+    "icon": "./icons/Typescript_logo_2020.svg.webp",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Popular"
+    "badge": "Essential"
   },
   {
     "id": 8,
-    "name": "MongoDB",
+    "name": "Java",
     "category": "Database",
-    "description": "A flexible document-oriented database designed for modern application development.",
-    "icon": "mongodb",
+    "description": "A secure, object-oriented programming language designed for portability and scale.",
+    "icon": "./icons/language-java.svg",
     "rating": 4.7,
     "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
+    "badge": "Robust"
   },
   {
     "id": 9,
-    "name": "PostgreSQL",
+    "name": "JavaScript",
     "category": "Database",
-    "description": "A powerful open-source relational database known for reliability and advanced features.",
-    "icon": "postgresql",
+    "description": "The versatile, ubiquitous scripting language powering dynamic behavior across the web.",
+    "icon": "./icons/Unofficial_JavaScript_logo_2.svg.webp",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Recommended"
+    "badge": "Ubiquitous"
   },
   {
     "id": 10,
     "name": "Tailwind CSS",
     "category": "Styling",
     "description": "A utility-first CSS framework for rapidly building modern and responsive interfaces.",
-    "icon": "tailwind",
+    "icon": "./icons/Tailwind_CSS_Logo.svg.webp",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Trending"
+    "badge": "Modern"
   },
   {
     "id": 11,
-    "name": "Git",
+    "name": "Github",
     "category": "Development",
     "description": "A distributed version control system for tracking changes and collaborating on projects.",
-    "icon": "git",
+    "icon": "./icons/github.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Essential"
@@ -113,10 +113,10 @@
     "id": 12,
     "name": "Docker",
     "category": "DevOps",
-    "description": "A platform for developing, shipping, and running applications using lightweight containers.",
-    "icon": "docker",
+    "description": "A platform designed to build, share, and run containerized applications reliably.",
+    "icon": "./icons/docker-xqo7wujxqilykvirnqyj59.webp",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Popular"
+    "badge": "Containers"
   }
 ]

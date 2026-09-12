@@ -1,7 +1,8 @@
 import { use } from 'react';
-import type { appType } from '../../types/appType';
+import type { AppType } from '../../types/appType';
+import AvailableApps from "./AvailableApps"
 interface AppsProps {
-    appsPromise: Promise<appType[]>
+    appsPromise: Promise<AppType[]>
 }
 const Apps = ({ appsPromise }: AppsProps) => {
     console.log(appsPromise)
@@ -9,7 +10,7 @@ const Apps = ({ appsPromise }: AppsProps) => {
     console.log(apps, 'apps')
     return (
         <div>
-
+            <AvailableApps apps={apps} />
         </div>
     );
 };

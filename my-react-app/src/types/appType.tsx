@@ -1,4 +1,4 @@
-export interface appType {
+export interface AppType {
     id: number,
     name: string,
     category: string,
