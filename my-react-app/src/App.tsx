@@ -3,7 +3,7 @@ import Banner from "./components/Banner";
 import Apps from "./components/apps/Apps"
 import { Suspense } from "react";
 import type { AppType } from "./types/appType";
-
+import Footer from "./components/Footer";
 
 const appsFetch = async (): Promise<AppType[]> => {
   const res = await fetch('/data.json')
@@ -21,7 +21,7 @@ function App() {
       <Suspense fallback={<p>Loading...</p>}>
         <Apps appsPromise={appsPromise} />
       </Suspense>
-
+      <Footer />
     </>
   );
 }
