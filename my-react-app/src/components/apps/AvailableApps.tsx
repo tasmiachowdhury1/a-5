@@ -1,4 +1,5 @@
-import React from 'react';
+import { useState } from 'react';
+import { toast } from "react-toastify";
 
 const getBadgeColor = (badge: string) => {
     if (badge === "Standard" || badge === "Versatile") {
@@ -15,9 +16,11 @@ const getBadgeColor = (badge: string) => {
     }
 }
 const AvailableApps = ({ apps }) => {
+    const [selectedApps, setSelectedApps] = useState([])
+    console.log(selectedApps, setSelectedApps, "selectedApps, setSelectedApps");
     console.log(apps, 'apps from available apps')
     return (
-        <section className="bg-gray-50 py-16">
+        <section className="py-16">
             <div className="mx-auto container">
                 <div className="mb-10">
 
@@ -36,7 +39,7 @@ const AvailableApps = ({ apps }) => {
                     {apps.map((app) => (
                         <div
                             key={app.id}
-                            className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm h-85 w-80"
+                            className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm h-85 w-90 transition-transform duration-500 hover:scale-105"
                         >
                             {/* Icon + Badge */}
                             <div className="mb-5 flex items-center justify-between">
@@ -61,7 +64,7 @@ const AvailableApps = ({ apps }) => {
 
                             {/* Category */}
                             <div className="mb-4">
-                                <span className="rounded-full bg-purple-50 px-3 py-1 text-xs font-medium text-purple-600">
+                                <span className="border-gray-200 bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600">
                                     {app.category}
                                 </span>
                             </div>
@@ -80,8 +83,12 @@ const AvailableApps = ({ apps }) => {
                             </div>
 
                             {/* Button */}
-                            <button className="w-full rounded-xl bg-gray-800 py-3 font-semibold text-white transition hover:opacity-90">
-                                Add to Stack
+                            <button onClick={() => {
+                                setSelectedApps([...selectedApps, app.id])
+                                toast.success(`${app.name} added to stack successfully.`)
+                            }} className="w-full rounded-xl bg-gray-800 py-3 font-semibold text-white transition hover:opacity-90 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50"
+                                disabled={selectedApps.includes(app.id)}>
+                                {selectedApps.includes(app.id) ? "Added" : "Add to Stack"}
                             </button>
                         </div>
                     ))}
