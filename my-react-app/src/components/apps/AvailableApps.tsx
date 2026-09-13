@@ -1,6 +1,13 @@
-import { useState } from 'react';
-import { toast } from "react-toastify";
 
+import { toast } from "react-toastify";
+import type { AppType } from '../../types/appType';
+import type { Dispatch, SetStateAction } from 'react';
+
+interface AvailableAppsProps {
+    apps: AppType[]
+    selectedApps: AppType[]
+    setSelectedApps: Dispatch<SetStateAction<AppType[]>>
+}
 const getBadgeColor = (badge: string) => {
     if (badge === "Standard" || badge === "Versatile") {
         return "bg-green-50 text-green-500";
@@ -15,8 +22,7 @@ const getBadgeColor = (badge: string) => {
         return "bg-purple-50 text-purple-500"
     }
 }
-const AvailableApps = ({ apps }) => {
-    const [selectedApps, setSelectedApps] = useState([])
+const AvailableApps = ({ apps, selectedApps, setSelectedApps }: AvailableAppsProps) => {
     console.log(selectedApps, setSelectedApps, "selectedApps, setSelectedApps");
     console.log(apps, 'apps from available apps')
     return (
@@ -84,11 +90,11 @@ const AvailableApps = ({ apps }) => {
 
                             {/* Button */}
                             <button onClick={() => {
-                                setSelectedApps([...selectedApps, app.id])
+                                setSelectedApps([...selectedApps, app])
                                 toast.success(`${app.name} added to stack successfully.`)
                             }} className="w-full rounded-xl bg-gray-800 py-3 font-semibold text-white transition hover:opacity-90 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50"
-                                disabled={selectedApps.includes(app.id)}>
-                                {selectedApps.includes(app.id) ? "Added" : "Add to Stack"}
+                                disabled={selectedApps.includes(app)}>
+                                {selectedApps.some((item) => item.id === app.id) ? "Added" : "Add to Stack"}
                             </button>
                         </div>
                     ))}
