@@ -1,5 +1,5 @@
 import Logo from '../assets/logo-text.png'
-const footer = () => {
+const Footer = () => {
     return (
         <footer className=" border-gray-100 bg-white mt-25 border-t">
             <div className=" p-10 container mx-auto">
@@ -136,4 +136,4 @@ const footer = () => {
     );
 };
 
-export default footer;
+export default Footer;

@@ -13,9 +13,9 @@ const AppCard = ({ app, removeFromStack }: AppCardProps) => {
                 <p className="text-sm text-gray-500">{app.category}</p>
             </div>
             <button onClick={() => removeFromStack(app.id)}
-                className="text-2xl text-gray-500 hover:text-red-700 cursor-pointer"
+                className="text-xl text-gray-500 hover:text-red-700 cursor-pointer"
             >
-                ×
+                ✕
             </button>
         </div>
     );

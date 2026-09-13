@@ -23,15 +23,15 @@ const getBadgeColor = (badge: string) => {
     }
 }
 const AvailableApps = ({ apps, selectedApps, setSelectedApps }: AvailableAppsProps) => {
-    console.log(selectedApps, setSelectedApps, "selectedApps, setSelectedApps");
-    console.log(apps, 'apps from available apps')
+
+
     return (
         <section className="py-16">
             <div className="mx-auto container">
                 <div className="mb-10">
 
                     <h2 className="text-5xl font-bold text-gray-900">
-                        Explore the <span className='bg-linear-to-r  from-pink-600 to-purple-500 bg-clip-text text-transparent'>Technologies</span>
+                        Explore the <span className='brand-gradient-text'>Technologies</span>
                     </h2>
 
                     <p className="text-xl text-gray-500">
@@ -45,7 +45,7 @@ const AvailableApps = ({ apps, selectedApps, setSelectedApps }: AvailableAppsPro
                     {apps.map((app) => (
                         <div
                             key={app.id}
-                            className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm h-85 w-90 transition-transform duration-500 hover:scale-105"
+                            className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm w-full transition-transform duration-500 hover:scale-105"
                         >
                             {/* Icon + Badge */}
                             <div className="mb-5 flex items-center justify-between">
@@ -93,8 +93,9 @@ const AvailableApps = ({ apps, selectedApps, setSelectedApps }: AvailableAppsPro
                                 setSelectedApps([...selectedApps, app])
                                 toast.success(`${app.name} added to stack successfully.`)
                             }} className="w-full rounded-xl bg-gray-800 py-3 font-semibold text-white transition hover:opacity-90 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50"
-                                disabled={selectedApps.includes(app)}>
-                                {selectedApps.some((item) => item.id === app.id) ? "Added" : "Add to Stack"}
+                                disabled={selectedApps.some((item) => item.id === app.id)}
+                            >
+                                {selectedApps.some((item) => item.id === app.id) ? "✓ Added to Stack" : "Add to Stack"}
                             </button>
                         </div>
                     ))}
